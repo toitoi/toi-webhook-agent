@@ -22,15 +22,18 @@ app.get('/dataogon/app-server/payload', function (req, res) {
 
 const C_LOCAL_REPO = 'dataogon/app-server';
 const C_PORT = 9118;
-const C_PROC_TO_KILL = "9001";
 
 const W_OBJ = {};
 W_OBJ.C_PROJECT_PATH = `G:/${C_LOCAL_REPO}`;
-W_OBJ.C_GET_PID = `netstat -aon | findstr 0.0.0.0:${C_PROC_TO_KILL}`;
+W_OBJ.C_PROC_TO_KILL = "9001";
+W_OBJ.C_GET_PID = `netstat -aon | findstr 127.0.0.1:${get().C_PROC_TO_KILL}`;
 W_OBJ.C_KILL_PID = null;
 
 const L_OBJ = {};
 L_OBJ.C_PROJECT_PATH = `/media/pi/PNY-SSD-01/${C_LOCAL_REPO}`;
+L_OBJ.C_PROC_TO_KILL = "9000";
+L_OBJ.C_GET_PID = `netstat -anp tcp | grep 127.0.0.1:${get().C_PROC_TO_KILL}`;
+L_OBJ.C_KILL_PID = null;
 
 function get() {
 	if (isWindow()) {
@@ -83,6 +86,7 @@ async function doSomething() {
 										console.log(stdout);
 
 										// TODO : if the timestamp same, then no need call below...
+										// TODO : if the changes require rebuild? (package.json/.env)
 										if (true) {
 											killServer();
 										}
@@ -101,51 +105,58 @@ async function doSomething() {
 	});
 }
 
+function searchPID(stdout) {
+	let pid = null;
+	if (isWindow()) {
+		let mock = "  TCP    127.0.0.1:3000         0.0.0.0:0              LISTENING       19708";
+		data = stdout.split(/(\s+)/);
+		pid = data[10];
+	} else {
+		let mock = "tcp        0      0 127.0.0.1:3000          0.0.0.0:* LISTEN      972/node";
+		data = stdout.split(/(\s+)/);
+		pid = data[12].substring(0, data[12].indexOf('/node'));
+	}
+	console.log(pid);
+	return pid;
+}
 
 async function killServer() {
 
 	console.log('kill the current running server...');
-	if (isWindow()) {
-		exec(get().C_GET_PID, (err, stdout, stderr) => {
-			if (err) {
-				// ntg to kill
-				console.log(err);
-				console.log(`no running server on port ${C_PROC_TO_KILL} found.`);
-				// build and restart server.
-				buildAndStart();
-			} else {
-				if (stdout) {
-					console.log(stdout);
-					data = stdout.split(/(\s+)/);
-					let pid = data[10];
-					console.log(pid);
-					W_OBJ.C_KILL_PID = `taskkill /F /PID ${pid}`;
-					if (!pid) {
-						return;
-					}
-					// kill the server by pid
-					exec(get().C_KILL_PID, (err, stdout, stderr) => {
-						if (err) {
-							console.log(err);
-						} else {
-							if (stdout) {
-								console.log(stdout);
-
-								// build and restart server.
-								buildAndStart();
-							}
-							if (stderr) console.log(stderr);
-						}
-					});
+	exec(get().C_GET_PID, (err, stdout, stderr) => {
+		if (err) {
+			// ntg to kill
+			console.log(err);
+			console.log(`no running server on port ${get().C_PROC_TO_KILL} found.`);
+			// build and restart server.
+			buildAndStart();
+		} else {
+			if (stdout) {
+				console.log(stdout);
+				let pid = searchPID(stdout);
+				W_OBJ.C_KILL_PID = `taskkill /F /PID ${pid}`;
+				L_OBJ.C_KILL_PID = `kill -9 ${pid}`;
+				if (!pid) {
+					return;
 				}
-				if (stderr) console.log(stderr);
+				// kill the server by pid
+				exec(get().C_KILL_PID, (err, stdout, stderr) => {
+					if (err) {
+						console.log(err);
+					} else {
+						if (stdout) {
+							console.log(stdout);
+
+							// build and restart server.
+							buildAndStart();
+						}
+						if (stderr) console.log(stderr);
+					}
+				});
 			}
-		});
-	} else {
-		let C_SHELL_SCRIPT = 'sh doSomething.sh /myDir';
-
-	}
-
+			if (stderr) console.log(stderr);
+		}
+	});
 }
 
 async function test() {
