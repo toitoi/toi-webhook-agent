@@ -1,0 +1,205 @@
+var x =
+{
+  "ref": "refs/heads/master",
+  "before": "d966110a856bd319c2effc0cb9a5e76e4bd3e345",
+  "after": "c6d0cd4567d138726970c17d21cf966b3876b331",
+  "repository": {
+    "id": 281726459,
+    "node_id": "MDEwOlJlcG9zaXRvcnkyODE3MjY0NTk=",
+    "name": "app-server",
+    "full_name": "dataogon/app-server",
+    "private": true,
+    "owner": {
+      "name": "dataogon",
+      "email": "67832150+dataogon@users.noreply.github.com",
+      "login": "dataogon",
+      "id": 67832150,
+      "node_id": "MDQ6VXNlcjY3ODMyMTUw",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/67832150?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dataogon",
+      "html_url": "https://github.com/dataogon",
+      "followers_url": "https://api.github.com/users/dataogon/followers",
+      "following_url": "https://api.github.com/users/dataogon/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dataogon/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dataogon/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dataogon/subscriptions",
+      "organizations_url": "https://api.github.com/users/dataogon/orgs",
+      "repos_url": "https://api.github.com/users/dataogon/repos",
+      "events_url": "https://api.github.com/users/dataogon/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dataogon/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/dataogon/app-server",
+    "description": "Backend Server for Dashboard",
+    "fork": false,
+    "url": "https://github.com/dataogon/app-server",
+    "forks_url": "https://api.github.com/repos/dataogon/app-server/forks",
+    "keys_url": "https://api.github.com/repos/dataogon/app-server/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/dataogon/app-server/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/dataogon/app-server/teams",
+    "hooks_url": "https://api.github.com/repos/dataogon/app-server/hooks",
+    "issue_events_url": "https://api.github.com/repos/dataogon/app-server/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/dataogon/app-server/events",
+    "assignees_url": "https://api.github.com/repos/dataogon/app-server/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/dataogon/app-server/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/dataogon/app-server/tags",
+    "blobs_url": "https://api.github.com/repos/dataogon/app-server/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/dataogon/app-server/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/dataogon/app-server/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/dataogon/app-server/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/dataogon/app-server/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/dataogon/app-server/languages",
+    "stargazers_url": "https://api.github.com/repos/dataogon/app-server/stargazers",
+    "contributors_url": "https://api.github.com/repos/dataogon/app-server/contributors",
+    "subscribers_url": "https://api.github.com/repos/dataogon/app-server/subscribers",
+    "subscription_url": "https://api.github.com/repos/dataogon/app-server/subscription",
+    "commits_url": "https://api.github.com/repos/dataogon/app-server/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/dataogon/app-server/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/dataogon/app-server/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/dataogon/app-server/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/dataogon/app-server/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/dataogon/app-server/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/dataogon/app-server/merges",
+    "archive_url": "https://api.github.com/repos/dataogon/app-server/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/dataogon/app-server/downloads",
+    "issues_url": "https://api.github.com/repos/dataogon/app-server/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/dataogon/app-server/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/dataogon/app-server/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/dataogon/app-server/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/dataogon/app-server/labels{/name}",
+    "releases_url": "https://api.github.com/repos/dataogon/app-server/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/dataogon/app-server/deployments",
+    "created_at": 1595434670,
+    "updated_at": "2020-08-01T17:41:38Z",
+    "pushed_at": 1596344835,
+    "git_url": "git://github.com/dataogon/app-server.git",
+    "ssh_url": "git@github.com:dataogon/app-server.git",
+    "clone_url": "https://github.com/dataogon/app-server.git",
+    "svn_url": "https://github.com/dataogon/app-server",
+    "homepage": null,
+    "size": 274,
+    "stargazers_count": 2,
+    "watchers_count": 2,
+    "language": "TypeScript",
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": true,
+    "has_wiki": true,
+    "has_pages": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 0,
+    "license": {
+      "key": "cc0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "spdx_id": "CC0-1.0",
+      "url": "https://api.github.com/licenses/cc0-1.0",
+      "node_id": "MDc6TGljZW5zZTY="
+    },
+    "forks": 0,
+    "open_issues": 0,
+    "watchers": 2,
+    "default_branch": "master",
+    "stargazers": 2,
+    "master_branch": "master"
+  },
+  "pusher": {
+    "name": "toitoi",
+    "email": "seekiatng@gmail.com"
+  },
+  "sender": {
+    "login": "toitoi",
+    "id": 6668219,
+    "node_id": "MDQ6VXNlcjY2NjgyMTk=",
+    "avatar_url": "https://avatars1.githubusercontent.com/u/6668219?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/toitoi",
+    "html_url": "https://github.com/toitoi",
+    "followers_url": "https://api.github.com/users/toitoi/followers",
+    "following_url": "https://api.github.com/users/toitoi/following{/other_user}",
+    "gists_url": "https://api.github.com/users/toitoi/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/toitoi/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/toitoi/subscriptions",
+    "organizations_url": "https://api.github.com/users/toitoi/orgs",
+    "repos_url": "https://api.github.com/users/toitoi/repos",
+    "events_url": "https://api.github.com/users/toitoi/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/toitoi/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "created": false,
+  "deleted": false,
+  "forced": false,
+  "base_ref": null,
+  "compare": "https://github.com/dataogon/app-server/compare/d966110a856b...c6d0cd4567d1",
+  "commits": [
+    {
+      "id": "c6d0cd4567d138726970c17d21cf966b3876b331",
+      "tree_id": "3b3a61a04603030b715a5268c319af01c5d40f59",
+      "distinct": true,
+      "message": "add mongodb + mongoose.\ncrud on image file.",
+      "timestamp": "2020-08-02T13:07:09+08:00",
+      "url": "https://github.com/dataogon/app-server/commit/c6d0cd4567d138726970c17d21cf966b3876b331",
+      "author": {
+        "name": "SK. Ng",
+        "email": "seekiatng@gmail.com",
+        "username": "toitoi"
+      },
+      "committer": {
+        "name": "SK. Ng",
+        "email": "seekiatng@gmail.com",
+        "username": "toitoi"
+      },
+      "added": [
+        "src/client/client.model.ts"
+      ],
+      "removed": [
+
+      ],
+      "modified": [
+        "package-lock.json",
+        "package.json",
+        "src/app.module.ts",
+        "src/client/client.controller.ts",
+        "src/client/client.module.ts",
+        "src/client/client.service.ts"
+      ]
+    }
+  ],
+  "head_commit": {
+    "id": "c6d0cd4567d138726970c17d21cf966b3876b331",
+    "tree_id": "3b3a61a04603030b715a5268c319af01c5d40f59",
+    "distinct": true,
+    "message": "add mongodb + mongoose.\ncrud on image file.",
+    "timestamp": "2020-08-02T13:07:09+08:00",
+    "url": "https://github.com/dataogon/app-server/commit/c6d0cd4567d138726970c17d21cf966b3876b331",
+    "author": {
+      "name": "SK. Ng",
+      "email": "seekiatng@gmail.com",
+      "username": "toitoi"
+    },
+    "committer": {
+      "name": "SK. Ng",
+      "email": "seekiatng@gmail.com",
+      "username": "toitoi"
+    },
+    "added": [
+      "src/client/client.model.ts"
+    ],
+    "removed": [
+
+    ],
+    "modified": [
+      "package-lock.json",
+      "package.json",
+      "src/app.module.ts",
+      "src/client/client.controller.ts",
+      "src/client/client.module.ts",
+      "src/client/client.service.ts"
+    ]
+  }
+}
