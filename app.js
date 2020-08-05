@@ -37,13 +37,13 @@ function get() {
 // window specific syntax
 W_OBJ.C_PROJECT_PATH = `G:/${C_LOCAL_REPO}`;
 W_OBJ.C_PROC_TO_KILL = "9001";
-W_OBJ.C_GET_PID = `netstat -aon | findstr 127.0.0.1:${get().C_PROC_TO_KILL}`;
+W_OBJ.C_GET_PID = `netstat -aon | findstr :${get().C_PROC_TO_KILL}`;
 W_OBJ.C_KILL_PID = null;
 
 // linux specific syntax
 L_OBJ.C_PROJECT_PATH = `/media/pi/PNY-SSD-01/${C_LOCAL_REPO}`;
 L_OBJ.C_PROC_TO_KILL = "9000";
-L_OBJ.C_GET_PID = `netstat -anp tcp | grep 127.0.0.1:${get().C_PROC_TO_KILL}`;
+L_OBJ.C_GET_PID = `netstat -anp tcp | grep :${get().C_PROC_TO_KILL}`;
 L_OBJ.C_KILL_PID = null;
 
 
