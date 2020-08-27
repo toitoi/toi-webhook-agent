@@ -66,7 +66,7 @@ async function doSomething() {
 
 	// check the last log
 
-	exec(`git -C ${get().C_PROJECT_PATH} reset--hard`, (err, stdout, stderr) => {
+	exec(`git -C ${get().C_PROJECT_PATH} reset --hard`, (err, stdout, stderr) => {
 		// exec(`git -C ${get().C_PROJECT_PATH} log -n 1`, (err, stdout, stderr) => {
 		if (err) {
 			console.log(err);
